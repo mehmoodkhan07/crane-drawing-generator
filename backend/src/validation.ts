@@ -81,16 +81,22 @@ export function validateCraneInput(raw: unknown): ValidationResult {
         message: issue.message,
       });
     }
-    // Still run headroom cross-field check if its own numeric inputs are present
+    // Still run headroom cross-field check only when its own inputs are individually valid
     if (raw && typeof raw === 'object') {
       const r = raw as Record<string, unknown>;
       if (
         typeof r.lifting_height_m === 'number' &&
         Number.isFinite(r.lifting_height_m) &&
+        r.lifting_height_m >= 3 &&
+        r.lifting_height_m <= 20 &&
         typeof r.floor_to_rail_height_m === 'number' &&
         Number.isFinite(r.floor_to_rail_height_m) &&
+        r.floor_to_rail_height_m >= 4 &&
+        r.floor_to_rail_height_m <= 25 &&
         typeof r.capacity_t === 'number' &&
-        Number.isFinite(r.capacity_t)
+        Number.isFinite(r.capacity_t) &&
+        r.capacity_t >= 1 &&
+        r.capacity_t <= 20
       ) {
         const headroom_mm = computeHookHeadroomMm(r.capacity_t);
         if (r.lifting_height_m * 1000 + headroom_mm > r.floor_to_rail_height_m * 1000) {

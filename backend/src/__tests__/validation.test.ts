@@ -74,4 +74,19 @@ describe('validation', () => {
       expect(fields).toContain('capacity_t');
     }
   });
+
+  it('skips cross-field headroom check when capacity_t is out of range (avoids misleading headroom)', () => {
+    const res = validateCraneInput({
+      ...VALID_INPUT,
+      name: '',
+      span_m: -5,
+      capacity_t: 500,
+      lifting_height_m: 19,
+      floor_to_rail_height_m: 8,
+    });
+    expect(res.success).toBe(false);
+    if (!res.success) {
+      expect(res.errors.some((e) => e.field === 'lifting_height_m')).toBe(false);
+    }
+  });
 });
