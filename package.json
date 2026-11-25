@@ -1,0 +1,16 @@
+{
+  "name": "crane-drawing-generator",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "build": "npm --prefix backend run build && npm --prefix frontend run build",
+    "test": "npm --prefix backend run test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
