@@ -61,4 +61,13 @@ describe('drawing (SVG)', () => {
     expect(svg).not.toContain('<script>');
     expect(svg).toContain('&lt;script&gt;alert(1)&lt;/script&gt; &amp; &quot;quotes&quot;');
   });
+
+  it('produces well-formed XML with no unescaped ampersands', () => {
+    const svg = generateCraneSvg(BASE_INPUT, computeCrane(BASE_INPUT));
+    expect(svg.startsWith('<svg ')).toBe(true);
+    expect(svg.endsWith('</svg>')).toBe(true);
+    // Every '&' must be part of a valid XML entity
+    const unescapedAmp = svg.match(/&(?!amp;|lt;|gt;|quot;|apos;)/g);
+    expect(unescapedAmp).toBeNull();
+  });
 });

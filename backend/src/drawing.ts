@@ -117,7 +117,7 @@ export function generateCraneSvg(input: CraneInput, computed: ComputedCrane): st
     </marker>
   </defs>
 
-  <!-- Sheet Background & Outer Border -->
+  <!-- Sheet Background and Outer Border -->
   <rect width="1400" height="980" fill="#ffffff" />
   <rect x="16" y="16" width="1368" height="948" fill="none" stroke="#0f172a" stroke-width="2" />
   <line x1="900" y1="16" x2="900" y2="964" stroke="#0f172a" stroke-width="1.5" />
@@ -125,19 +125,19 @@ export function generateCraneSvg(input: CraneInput, computed: ComputedCrane): st
   <!-- VIEW 1: FRONT ELEVATION -->
   <text x="36" y="44" font-family="monospace" font-size="14" font-weight="bold" fill="#0f172a">1. FRONT ELEVATION</text>
 
-  <!-- Runway columns & rails -->
+  <!-- Runway columns and rails -->
   <rect x="${elevX0 - 14}" y="${railY}" width="28" height="${floorY - railY}" fill="#f1f5f9" stroke="#475569" stroke-width="1.2" />
   <rect x="${elevX1 - 14}" y="${railY}" width="28" height="${floorY - railY}" fill="#f1f5f9" stroke="#475569" stroke-width="1.2" />
   <line x1="${elevX0 - 40}" y1="${floorY}" x2="${elevX1 + 40}" y2="${floorY}" stroke="#0f172a" stroke-width="2" />
   <text x="${elevX0 + 24}" y="${floorY - 6}" font-family="monospace" font-size="10" fill="#475569">FLOOR ±0</text>
 
-  <!-- End carriages & bridge girder -->
+  <!-- End carriages and bridge girder -->
   <rect x="${elevX0 - 18}" y="${railY - 18}" width="36" height="18" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.2" />
   <rect x="${elevX1 - 18}" y="${railY - 18}" width="36" height="18" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.2" />
   <rect x="${elevX0 - 12}" y="${girderTopY}" width="${elevSpanPx + 24}" height="${girderH}" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.5" />
   <text x="${(elevX0 + elevX1) / 2}" y="${girderTopY + girderH / 2 + 4}" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#0f172a">${input.capacity_t}t</text>
 
-  <!-- Trolley & Hook -->
+  <!-- Trolley and Hook -->
   <rect x="${trolleyX - 24}" y="${girderTopY + girderH}" width="48" height="22" fill="#94a3b8" stroke="#0f172a" stroke-width="1.2" />
   <line x1="${trolleyX}" y1="${girderTopY + girderH + 22}" x2="${trolleyX}" y2="${hookY}" stroke="#0f172a" stroke-width="1.5" />
   <path d="M ${trolleyX - 6} ${hookY} A 6 6 0 1 0 ${trolleyX + 6} ${hookY + 6}" fill="none" stroke="#0f172a" stroke-width="2" />
@@ -170,12 +170,12 @@ export function generateCraneSvg(input: CraneInput, computed: ComputedCrane): st
   <text x="920" y="44" font-family="monospace" font-size="14" font-weight="bold" fill="#0f172a">3. END VIEW</text>
   <!-- Runway rail -->
   <rect x="${endCx - 16}" y="${endRailY}" width="32" height="14" fill="#64748b" stroke="#0f172a" stroke-width="1.2" />
-  <!-- Wheel & End carriage -->
+  <!-- Wheel and End carriage -->
   <circle cx="${endCx}" cy="${endRailY - 14}" r="14" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
   <rect x="${endCx - 45}" y="${endRailY - 46}" width="90" height="22" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.2" />
   <!-- Girder cross section -->
   <rect x="${endCx - 22}" y="${endRailY - 90}" width="44" height="44" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
-  <!-- Trolley & hook -->
+  <!-- Trolley and hook -->
   <rect x="${endCx - 16}" y="${endRailY - 46}" width="32" height="18" fill="#94a3b8" stroke="#0f172a" stroke-width="1.2" />
   <line x1="${endCx}" y1="${endRailY - 28}" x2="${endCx}" y2="${endRailY + 38}" stroke="#0f172a" stroke-width="1.5" />
   <path d="M ${endCx - 6} ${endRailY + 38} A 6 6 0 1 0 ${endCx + 6} ${endRailY + 44}" fill="none" stroke="#0f172a" stroke-width="2" />
