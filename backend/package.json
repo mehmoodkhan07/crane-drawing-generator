@@ -10,7 +10,7 @@
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "test": "vitest run"
+    "test": "vitest run && node --test --experimental-strip-types src/__tests__/db.test.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
