@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980">
+  <defs>
+    <marker id="arrow-start" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 10 1 L 0 5 L 10 9 z" fill="#0f172a" />
+    </marker>
+    <marker id="arrow-end" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0f172a" />
+    </marker>
+  </defs>
+
+  <!-- Sheet Background & Outer Border -->
+  <rect width="1400" height="980" fill="#ffffff" />
+  <rect x="16" y="16" width="1368" height="948" fill="none" stroke="#0f172a" stroke-width="2" />
+  <line x1="900" y1="16" x2="900" y2="964" stroke="#0f172a" stroke-width="1.5" />
+
+  <!-- VIEW 1: FRONT ELEVATION -->
+  <text x="36" y="44" font-family="monospace" font-size="14" font-weight="bold" fill="#0f172a">1. FRONT ELEVATION</text>
+
+  <!-- Runway columns & rails -->
+  <rect x="136" y="170" width="28" height="120" fill="#f1f5f9" stroke="#475569" stroke-width="1.2" />
+  <rect x="686" y="170" width="28" height="120" fill="#f1f5f9" stroke="#475569" stroke-width="1.2" />
+  <line x1="110" y1="290" x2="740" y2="290" stroke="#0f172a" stroke-width="2" />
+  <text x="174" y="284" font-family="monospace" font-size="10" fill="#475569">FLOOR ±0</text>
+
+  <!-- End carriages & bridge girder -->
+  <rect x="132" y="152" width="36" height="18" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.2" />
+  <rect x="682" y="152" width="36" height="18" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.2" />
+  <rect x="138" y="124.66666666666666" width="574" height="33.333333333333336" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.5" />
+  <text x="425" y="145.33333333333331" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#0f172a">10t</text>
+
+  <!-- Trolley & Hook -->
+  <rect x="357" y="158" width="48" height="22" fill="#94a3b8" stroke="#0f172a" stroke-width="1.2" />
+  <line x1="381" y1="180" x2="381" y2="188.6" stroke="#0f172a" stroke-width="1.5" />
+  <path d="M 375 188.6 A 6 6 0 1 0 387 194.6" fill="none" stroke="#0f172a" stroke-width="2" />
+
+  <!-- Front Elevation Dimensions (offset rows to avoid overlap) -->
+  
+    <line x1="150" y1="170" x2="150" y2="74" stroke="#64748b" stroke-width="0.8" /><line x1="700" y1="170" x2="700" y2="74" stroke="#64748b" stroke-width="0.8" />
+    <line x1="150" y1="78" x2="700" y2="78" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <rect x="374.8" y="64" width="100.39999999999999" height="13" fill="#ffffff" />
+    <text x="425" y="74" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a">SPAN: 25000 mm</text>
+  
+  
+    
+    <line x1="150" y1="104" x2="185" y2="104" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <rect x="107.4" y="90" width="120.19999999999999" height="13" fill="#ffffff" />
+    <text x="167.5" y="100" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a">MIN APP L: 920 mm</text>
+  
+  
+    
+    <line x1="665" y1="104" x2="700" y2="104" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <rect x="619.1" y="90" width="126.8" height="13" fill="#ffffff" />
+    <text x="682.5" y="100" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a">MIN APP R: 1150 mm</text>
+  
+  
+    <line x1="150" y1="170" x2="80" y2="170" stroke="#64748b" stroke-width="0.8" /><line x1="150" y1="290" x2="80" y2="290" stroke="#64748b" stroke-width="0.8" />
+    <line x1="84" y1="170" x2="84" y2="290" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <text x="78" y="230" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a" transform="rotate(-90 78 230)">FLOOR TO RAIL: 8500 mm</text>
+  
+  
+    <line x1="381" y1="170" x2="335" y2="170" stroke="#64748b" stroke-width="0.8" /><line x1="381" y1="188.6" x2="335" y2="188.6" stroke="#64748b" stroke-width="0.8" />
+    <line x1="339" y1="170" x2="339" y2="188.6" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <text x="333" y="179.3" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a" transform="rotate(-90 333 179.3)">HEADROOM: 620 mm</text>
+  
+  
+    <line x1="381" y1="188.6" x2="419" y2="188.6" stroke="#64748b" stroke-width="0.8" /><line x1="381" y1="278" x2="419" y2="278" stroke="#64748b" stroke-width="0.8" />
+    <line x1="423" y1="188.6" x2="423" y2="278" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <text x="417" y="233.3" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a" transform="rotate(-90 417 233.3)">LIFTING HEIGHT: 7700 mm</text>
+  
+
+  <!-- VIEW 2: PLAN VIEW (TOP) -->
+  <text x="36" y="495" font-family="monospace" font-size="14" font-weight="bold" fill="#0f172a">2. PLAN VIEW (TOP)</text>
+  <!-- Runway rails -->
+  <line x1="150" y1="515" x2="150" y2="702.64" stroke="#475569" stroke-width="2" stroke-dasharray="6,4" />
+  <line x1="700" y1="515" x2="700" y2="702.64" stroke="#475569" stroke-width="2" stroke-dasharray="6,4" />
+  <!-- End carriages -->
+  <rect x="136" y="540" width="28" height="137.64" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
+  <rect x="686" y="540" width="28" height="137.64" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
+  <!-- Bridge girder -->
+  <rect x="150" y="594.8199999999999" width="550" height="28" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.5" />
+
+  <!-- Plan View Dimensions -->
+  
+    <line x1="136" y1="677.64" x2="136" y2="718.64" stroke="#64748b" stroke-width="0.8" /><line x1="714" y1="677.64" x2="714" y2="718.64" stroke="#64748b" stroke-width="0.8" />
+    <line x1="136" y1="722.64" x2="714" y2="722.64" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <rect x="341.8" y="708.64" width="166.39999999999998" height="13" fill="#ffffff" />
+    <text x="425" y="718.64" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a">OVERALL LENGTH: 25270 mm</text>
+  
+  
+    <line x1="136" y1="552" x2="106" y2="552" stroke="#64748b" stroke-width="0.8" /><line x1="136" y1="665.64" x2="106" y2="665.64" stroke="#64748b" stroke-width="0.8" />
+    <line x1="110" y1="552" x2="110" y2="665.64" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <text x="104" y="608.8199999999999" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a" transform="rotate(-90 104 608.8199999999999)">WHEELBASE: 3788 mm</text>
+  
+  
+    <line x1="136" y1="540" x2="68" y2="540" stroke="#64748b" stroke-width="0.8" /><line x1="136" y1="677.64" x2="68" y2="677.64" stroke="#64748b" stroke-width="0.8" />
+    <line x1="72" y1="540" x2="72" y2="677.64" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <text x="66" y="608.8199999999999" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a" transform="rotate(-90 66 608.8199999999999)">OVERALL WIDTH: 4298 mm</text>
+  
+
+  <!-- VIEW 3: END VIEW -->
+  <text x="920" y="44" font-family="monospace" font-size="14" font-weight="bold" fill="#0f172a">3. END VIEW</text>
+  <!-- Runway rail -->
+  <rect x="1104" y="200" width="32" height="14" fill="#64748b" stroke="#0f172a" stroke-width="1.2" />
+  <!-- Wheel & End carriage -->
+  <circle cx="1120" cy="186" r="14" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
+  <rect x="1075" y="154" width="90" height="22" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.2" />
+  <!-- Girder cross section -->
+  <rect x="1098" y="110" width="44" height="44" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
+  <!-- Trolley & hook -->
+  <rect x="1104" y="154" width="32" height="18" fill="#94a3b8" stroke="#0f172a" stroke-width="1.2" />
+  <line x1="1120" y1="172" x2="1120" y2="238" stroke="#0f172a" stroke-width="1.5" />
+  <path d="M 1114 238 A 6 6 0 1 0 1126 244" fill="none" stroke="#0f172a" stroke-width="2" />
+  <text x="1144" y="190" font-family="monospace" font-size="11" fill="#0f172a">WHEEL DIA: ø250 mm</text>
+
+  <!-- TECHNICAL DATA TABLE -->
+  <rect x="916" y="316" width="462" height="433" fill="#f8fafc" stroke="#0f172a" stroke-width="1.2" />
+  <text x="928" y="336" font-family="monospace" font-size="13" font-weight="bold" fill="#0f172a">TECHNICAL DATA (SI / METRIC)</text>
+  <line x1="916" y1="344" x2="1378" y2="344" stroke="#0f172a" stroke-width="1" />
+  
+        <line x1="920" y1="371" x2="1375" y2="371" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="366" font-family="monospace" font-size="10.5" fill="#334155">CAPACITY (LOAD)</text>
+        <text x="1335" y="366" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">10 t</text>
+        
+      
+        <line x1="920" y1="392" x2="1375" y2="392" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="387" font-family="monospace" font-size="10.5" fill="#334155">SPAN</text>
+        <text x="1335" y="387" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">25000 mm</text>
+        
+      
+        <line x1="920" y1="413" x2="1375" y2="413" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="408" font-family="monospace" font-size="10.5" fill="#334155">LIFTING HEIGHT</text>
+        <text x="1335" y="408" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">7700 mm</text>
+        
+      
+        <line x1="920" y1="434" x2="1375" y2="434" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="429" font-family="monospace" font-size="10.5" fill="#334155">FLOOR TO RAIL</text>
+        <text x="1335" y="429" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">8500 mm</text>
+        
+      
+        <line x1="920" y1="455" x2="1375" y2="455" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="450" font-family="monospace" font-size="10.5" fill="#334155">DUTY CLASS</text>
+        <text x="1335" y="450" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">A5</text>
+        
+      
+        <line x1="920" y1="476" x2="1375" y2="476" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="471" font-family="monospace" font-size="10.5" fill="#334155">HOIST SPEED</text>
+        <text x="1335" y="471" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">6 m/min</text>
+        
+      
+        <line x1="920" y1="497" x2="1375" y2="497" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="492" font-family="monospace" font-size="10.5" fill="#334155">TRAVERSE SPEED</text>
+        <text x="1335" y="492" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">20 m/min</text>
+        
+      
+        <line x1="920" y1="518" x2="1375" y2="518" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="513" font-family="monospace" font-size="10.5" fill="#334155">TRAVEL SPEED</text>
+        <text x="1335" y="513" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">32 m/min</text>
+        
+      
+        <line x1="920" y1="539" x2="1375" y2="539" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="534" font-family="monospace" font-size="10.5" fill="#334155">POWER SUPPLY</text>
+        <text x="1335" y="534" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">380V/50Hz</text>
+        
+      
+        <line x1="920" y1="560" x2="1375" y2="560" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="555" font-family="monospace" font-size="10.5" fill="#334155">SUPPLY POWER</text>
+        <text x="1335" y="555" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">14.3 kW</text>
+        <text x="1365" y="555" text-anchor="end" font-family="monospace" font-size="9" fill="#b45309">est.</text>
+      
+        <line x1="920" y1="581" x2="1375" y2="581" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="576" font-family="monospace" font-size="10.5" fill="#334155">OVERALL LENGTH</text>
+        <text x="1335" y="576" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">25270 mm</text>
+        
+      
+        <line x1="920" y1="602" x2="1375" y2="602" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="597" font-family="monospace" font-size="10.5" fill="#334155">WHEELBASE</text>
+        <text x="1335" y="597" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">3788 mm</text>
+        <text x="1365" y="597" text-anchor="end" font-family="monospace" font-size="9" fill="#b45309">est.</text>
+      
+        <line x1="920" y1="623" x2="1375" y2="623" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="618" font-family="monospace" font-size="10.5" fill="#334155">OVERALL WIDTH</text>
+        <text x="1335" y="618" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">4298 mm</text>
+        <text x="1365" y="618" text-anchor="end" font-family="monospace" font-size="9" fill="#b45309">est.</text>
+      
+        <line x1="920" y1="644" x2="1375" y2="644" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="639" font-family="monospace" font-size="10.5" fill="#334155">GIRDER HEIGHT</text>
+        <text x="1335" y="639" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">1250 mm</text>
+        <text x="1365" y="639" text-anchor="end" font-family="monospace" font-size="9" fill="#b45309">est.</text>
+      
+        <line x1="920" y1="665" x2="1375" y2="665" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="660" font-family="monospace" font-size="10.5" fill="#334155">HOOK HEADROOM</text>
+        <text x="1335" y="660" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">620 mm</text>
+        <text x="1365" y="660" text-anchor="end" font-family="monospace" font-size="9" fill="#b45309">est.</text>
+      
+        <line x1="920" y1="686" x2="1375" y2="686" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="681" font-family="monospace" font-size="10.5" fill="#334155">WHEEL DIAMETER</text>
+        <text x="1335" y="681" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">250 mm</text>
+        
+      
+        <line x1="920" y1="707" x2="1375" y2="707" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="702" font-family="monospace" font-size="10.5" fill="#334155">TROLLEY WEIGHT</text>
+        <text x="1335" y="702" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">0.68 t</text>
+        <text x="1365" y="702" text-anchor="end" font-family="monospace" font-size="9" fill="#b45309">est.</text>
+      
+        <line x1="920" y1="728" x2="1375" y2="728" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="723" font-family="monospace" font-size="10.5" fill="#334155">CRANE WEIGHT</text>
+        <text x="1335" y="723" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">8.91 t</text>
+        <text x="1365" y="723" text-anchor="end" font-family="monospace" font-size="9" fill="#b45309">est.</text>
+      
+        <line x1="920" y1="749" x2="1375" y2="749" stroke="#e2e8f0" stroke-width="0.8" />
+        <text x="928" y="744" font-family="monospace" font-size="10.5" fill="#334155">MAX STATIC WHEEL LOAD</text>
+        <text x="1335" y="744" text-anchor="end" font-family="monospace" font-size="10.5" font-weight="bold" fill="#0f172a">72.31 kN</text>
+        
+      
+
+  <!-- TITLE BLOCK -->
+  <rect x="916" y="810" width="462" height="142" fill="#ffffff" stroke="#0f172a" stroke-width="1.5" />
+  <line x1="916" y1="854" x2="1378" y2="854" stroke="#0f172a" stroke-width="1" />
+  <line x1="916" y1="902" x2="1378" y2="902" stroke="#0f172a" stroke-width="1" />
+  <text x="928" y="838" font-family="monospace" font-size="14" font-weight="bold" fill="#0f172a">Sample 10t / 25m</text>
+  <text x="928" y="882" font-family="monospace" font-size="11" fill="#334155">SINGLE GIRDER EOT CRANE — 10t / 25m (A5)</text>
+  <text x="928" y="924" font-family="monospace" font-size="11" font-weight="bold" fill="#b91c1c">NOT TO SCALE / PRELIMINARY</text>
+  <text x="928" y="942" font-family="monospace" font-size="10" fill="#475569">ALL DIMENSIONS IN mm | DATE: 2026-11-25</text>
+</svg>
