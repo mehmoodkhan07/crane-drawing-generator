@@ -3,6 +3,7 @@ import { DatabaseSync } from 'node:sqlite';
 import { validateCraneInput } from '../validation.js';
 import { computeCrane, CraneInput, ComputedCrane } from '../calculations.js';
 import { generateCraneSvg } from '../drawing.js';
+import { FORMULAS } from '../formulas.js';
 
 interface DesignRow {
   id: number;
@@ -53,6 +54,11 @@ function formatDesignRow(row: DesignRow) {
 
 export function createDesignsRouter(db: DatabaseSync): Router {
   const router = Router();
+
+  // GET /api/formulas — formula registry with source & confidence
+  router.get('/formulas', (_req: Request, res: Response) => {
+    res.status(200).json(Object.values(FORMULAS));
+  });
 
   // POST /api/preview — validate + compute + return SVG without saving
   router.post('/preview', (req: Request, res: Response) => {
