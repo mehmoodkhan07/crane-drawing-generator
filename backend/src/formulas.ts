@@ -75,4 +75,11 @@ export const FORMULAS: Record<string, FormulaMeta> = {
     source: 'ENGINEERING_RULE_OF_THUMB_ESTIMATE',
     confidence: 'low',
   },
+  lifting_height_headroom_check: {
+    id: 'lifting_height_headroom_check',
+    description:
+      'Reference drawing shows 7900 mm lifting height and 8321 mm floor-to-rail with 620 mm headroom; these do not satisfy our own rule (7900+620 > 8321). Seed uses 7700 mm. Real relation to be confirmed.',
+    source: 'TO_VERIFY_WITH_ENGINEERS',
+    confidence: 'low',
+  },
 };
