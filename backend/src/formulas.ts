@@ -44,10 +44,16 @@ export const FORMULAS: Record<string, FormulaMeta> = {
     source: 'ENGINEERING_RULE_OF_THUMB_ESTIMATE',
     confidence: 'low',
   },
+  wheel_diameter_base_mm: {
+    id: 'wheel_diameter_base_mm',
+    description: '250 mm wheel diameter from reference drawing (10 t)',
+    source: 'REFERENCE_DRAWING',
+    confidence: 'high',
+  },
   wheel_diameter_mm: {
     id: 'wheel_diameter_mm',
-    description: '250 mm default (<=12.5 t), 315 mm (>12.5 t)',
-    source: 'REFERENCE_DRAWING',
+    description: '250 mm (<=12.5 t), scaled to 315 mm (>12.5 t) as capacity estimate',
+    source: 'ENGINEERING_RULE_OF_THUMB_ESTIMATE',
     confidence: 'low',
   },
   trolley_weight_t: {
