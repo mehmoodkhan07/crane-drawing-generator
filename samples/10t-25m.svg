@@ -8,7 +8,7 @@
     </marker>
   </defs>
 
-  <!-- Sheet Background & Outer Border -->
+  <!-- Sheet Background and Outer Border -->
   <rect width="1400" height="980" fill="#ffffff" />
   <rect x="16" y="16" width="1368" height="948" fill="none" stroke="#0f172a" stroke-width="2" />
   <line x1="900" y1="16" x2="900" y2="964" stroke="#0f172a" stroke-width="1.5" />
@@ -16,97 +16,97 @@
   <!-- VIEW 1: FRONT ELEVATION -->
   <text x="36" y="44" font-family="monospace" font-size="14" font-weight="bold" fill="#0f172a">1. FRONT ELEVATION</text>
 
-  <!-- Runway columns & rails -->
-  <rect x="136" y="170" width="28" height="120" fill="#f1f5f9" stroke="#475569" stroke-width="1.2" />
-  <rect x="686" y="170" width="28" height="120" fill="#f1f5f9" stroke="#475569" stroke-width="1.2" />
-  <line x1="110" y1="290" x2="740" y2="290" stroke="#0f172a" stroke-width="2" />
-  <text x="174" y="284" font-family="monospace" font-size="10" fill="#475569">FLOOR ±0</text>
+  <!-- Runway columns and rails -->
+  <rect x="136" y="170" width="28" height="218" fill="#f1f5f9" stroke="#475569" stroke-width="1.2" />
+  <rect x="776" y="170" width="28" height="218" fill="#f1f5f9" stroke="#475569" stroke-width="1.2" />
+  <line x1="110" y1="388" x2="830" y2="388" stroke="#0f172a" stroke-width="2" />
+  <text x="174" y="382" font-family="monospace" font-size="10" fill="#475569">FLOOR ±0</text>
 
-  <!-- End carriages & bridge girder -->
+  <!-- End carriages and bridge girder -->
   <rect x="132" y="152" width="36" height="18" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.2" />
-  <rect x="682" y="152" width="36" height="18" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.2" />
-  <rect x="138" y="124.66666666666666" width="574" height="33.333333333333336" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.5" />
-  <text x="425" y="145.33333333333331" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#0f172a">10t</text>
+  <rect x="772" y="152" width="36" height="18" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.2" />
+  <rect x="138" y="126" width="664" height="32" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.5" />
+  <text x="470" y="146" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#0f172a">10t</text>
 
-  <!-- Trolley & Hook -->
-  <rect x="357" y="158" width="48" height="22" fill="#94a3b8" stroke="#0f172a" stroke-width="1.2" />
-  <line x1="381" y1="180" x2="381" y2="188.6" stroke="#0f172a" stroke-width="1.5" />
-  <path d="M 375 188.6 A 6 6 0 1 0 387 194.6" fill="none" stroke="#0f172a" stroke-width="2" />
+  <!-- Trolley and Hook -->
+  <rect x="394.8" y="158" width="48" height="22" fill="#94a3b8" stroke="#0f172a" stroke-width="1.2" />
+  <line x1="418.8" y1="180" x2="418.8" y2="186" stroke="#0f172a" stroke-width="1.5" />
+  <path d="M 412.8 186 A 6 6 0 1 0 424.8 192" fill="none" stroke="#0f172a" stroke-width="2" />
 
   <!-- Front Elevation Dimensions (offset rows to avoid overlap) -->
   
-    <line x1="150" y1="170" x2="150" y2="74" stroke="#64748b" stroke-width="0.8" /><line x1="700" y1="170" x2="700" y2="74" stroke="#64748b" stroke-width="0.8" />
-    <line x1="150" y1="78" x2="700" y2="78" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
-    <rect x="374.8" y="64" width="100.39999999999999" height="13" fill="#ffffff" />
-    <text x="425" y="74" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a">SPAN: 25000 mm</text>
+    <line x1="150" y1="170" x2="150" y2="74" stroke="#64748b" stroke-width="0.8" /><line x1="790" y1="170" x2="790" y2="74" stroke="#64748b" stroke-width="0.8" />
+    <line x1="150" y1="78" x2="790" y2="78" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <rect x="419.8" y="64" width="100.39999999999999" height="13" fill="#ffffff" />
+    <text x="470" y="74" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a">SPAN: 25000 mm</text>
   
   
     
-    <line x1="150" y1="104" x2="185" y2="104" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
-    <rect x="107.4" y="90" width="120.19999999999999" height="13" fill="#ffffff" />
-    <text x="167.5" y="100" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a">MIN APP L: 920 mm</text>
+    <line x1="150" y1="104" x2="178" y2="104" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <rect x="103.9" y="90" width="120.19999999999999" height="13" fill="#ffffff" />
+    <text x="164" y="100" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a">MIN APP L: 920 mm</text>
   
   
     
-    <line x1="665" y1="104" x2="700" y2="104" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
-    <rect x="619.1" y="90" width="126.8" height="13" fill="#ffffff" />
-    <text x="682.5" y="100" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a">MIN APP R: 1150 mm</text>
+    <line x1="760.56" y1="104" x2="790" y2="104" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <rect x="711.88" y="90" width="126.8" height="13" fill="#ffffff" />
+    <text x="775.28" y="100" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a">MIN APP R: 1150 mm</text>
   
   
-    <line x1="150" y1="170" x2="80" y2="170" stroke="#64748b" stroke-width="0.8" /><line x1="150" y1="290" x2="80" y2="290" stroke="#64748b" stroke-width="0.8" />
-    <line x1="84" y1="170" x2="84" y2="290" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
-    <text x="78" y="230" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a" transform="rotate(-90 78 230)">FLOOR TO RAIL: 8500 mm</text>
+    <line x1="150" y1="170" x2="80" y2="170" stroke="#64748b" stroke-width="0.8" /><line x1="150" y1="388" x2="80" y2="388" stroke="#64748b" stroke-width="0.8" />
+    <line x1="84" y1="170" x2="84" y2="388" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <text x="78" y="279" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a" transform="rotate(-90 78 279)">FLOOR TO RAIL: 8500 mm</text>
   
   
-    <line x1="381" y1="170" x2="335" y2="170" stroke="#64748b" stroke-width="0.8" /><line x1="381" y1="188.6" x2="335" y2="188.6" stroke="#64748b" stroke-width="0.8" />
-    <line x1="339" y1="170" x2="339" y2="188.6" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
-    <text x="333" y="179.3" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a" transform="rotate(-90 333 179.3)">HEADROOM: 620 mm</text>
+    <line x1="418.8" y1="170" x2="372.8" y2="170" stroke="#64748b" stroke-width="0.8" /><line x1="418.8" y1="186" x2="372.8" y2="186" stroke="#64748b" stroke-width="0.8" />
+    <line x1="376.8" y1="170" x2="376.8" y2="186" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <text x="370.8" y="178" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a" transform="rotate(-90 370.8 178)">HEADROOM: 620 mm</text>
   
   
-    <line x1="381" y1="188.6" x2="419" y2="188.6" stroke="#64748b" stroke-width="0.8" /><line x1="381" y1="278" x2="419" y2="278" stroke="#64748b" stroke-width="0.8" />
-    <line x1="423" y1="188.6" x2="423" y2="278" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
-    <text x="417" y="233.3" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a" transform="rotate(-90 417 233.3)">LIFTING HEIGHT: 7700 mm</text>
+    <line x1="418.8" y1="186" x2="456.8" y2="186" stroke="#64748b" stroke-width="0.8" /><line x1="418.8" y1="374" x2="456.8" y2="374" stroke="#64748b" stroke-width="0.8" />
+    <line x1="460.8" y1="186" x2="460.8" y2="374" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <text x="454.8" y="280" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a" transform="rotate(-90 454.8 280)">LIFTING HEIGHT: 7700 mm</text>
   
 
   <!-- VIEW 2: PLAN VIEW (TOP) -->
   <text x="36" y="495" font-family="monospace" font-size="14" font-weight="bold" fill="#0f172a">2. PLAN VIEW (TOP)</text>
   <!-- Runway rails -->
-  <line x1="150" y1="515" x2="150" y2="702.64" stroke="#475569" stroke-width="2" stroke-dasharray="6,4" />
-  <line x1="700" y1="515" x2="700" y2="702.64" stroke="#475569" stroke-width="2" stroke-dasharray="6,4" />
+  <line x1="150" y1="515" x2="150" y2="674" stroke="#475569" stroke-width="2" stroke-dasharray="6,4" />
+  <line x1="783" y1="515" x2="783" y2="674" stroke="#475569" stroke-width="2" stroke-dasharray="6,4" />
   <!-- End carriages -->
-  <rect x="136" y="540" width="28" height="137.64" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
-  <rect x="686" y="540" width="28" height="137.64" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
+  <rect x="140" y="540" width="28" height="109" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
+  <rect x="765" y="540" width="28" height="109" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
   <!-- Bridge girder -->
-  <rect x="150" y="594.8199999999999" width="550" height="28" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.5" />
+  <rect x="150" y="580.5" width="633" height="28" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.5" />
 
   <!-- Plan View Dimensions -->
   
-    <line x1="136" y1="677.64" x2="136" y2="718.64" stroke="#64748b" stroke-width="0.8" /><line x1="714" y1="677.64" x2="714" y2="718.64" stroke="#64748b" stroke-width="0.8" />
-    <line x1="136" y1="722.64" x2="714" y2="722.64" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
-    <rect x="341.8" y="708.64" width="166.39999999999998" height="13" fill="#ffffff" />
-    <text x="425" y="718.64" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a">OVERALL LENGTH: 25270 mm</text>
+    <line x1="140" y1="649" x2="140" y2="690" stroke="#64748b" stroke-width="0.8" /><line x1="793" y1="649" x2="793" y2="690" stroke="#64748b" stroke-width="0.8" />
+    <line x1="140" y1="694" x2="793" y2="694" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <rect x="383.3" y="680" width="166.39999999999998" height="13" fill="#ffffff" />
+    <text x="466.5" y="690" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a">OVERALL LENGTH: 25270 mm</text>
   
   
-    <line x1="136" y1="552" x2="106" y2="552" stroke="#64748b" stroke-width="0.8" /><line x1="136" y1="665.64" x2="106" y2="665.64" stroke="#64748b" stroke-width="0.8" />
-    <line x1="110" y1="552" x2="110" y2="665.64" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
-    <text x="104" y="608.8199999999999" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a" transform="rotate(-90 104 608.8199999999999)">WHEELBASE: 3788 mm</text>
+    <line x1="140" y1="552" x2="106" y2="552" stroke="#64748b" stroke-width="0.8" /><line x1="140" y1="637" x2="106" y2="637" stroke="#64748b" stroke-width="0.8" />
+    <line x1="110" y1="552" x2="110" y2="637" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <text x="104" y="594.5" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a" transform="rotate(-90 104 594.5)">WHEELBASE: 3788 mm</text>
   
   
-    <line x1="136" y1="540" x2="68" y2="540" stroke="#64748b" stroke-width="0.8" /><line x1="136" y1="677.64" x2="68" y2="677.64" stroke="#64748b" stroke-width="0.8" />
-    <line x1="72" y1="540" x2="72" y2="677.64" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
-    <text x="66" y="608.8199999999999" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a" transform="rotate(-90 66 608.8199999999999)">OVERALL WIDTH: 4298 mm</text>
+    <line x1="140" y1="540" x2="68" y2="540" stroke="#64748b" stroke-width="0.8" /><line x1="140" y1="649" x2="68" y2="649" stroke="#64748b" stroke-width="0.8" />
+    <line x1="72" y1="540" x2="72" y2="649" stroke="#0f172a" stroke-width="1" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <text x="66" y="594.5" text-anchor="middle" font-family="monospace" font-size="11" fill="#0f172a" transform="rotate(-90 66 594.5)">OVERALL WIDTH: 4298 mm</text>
   
 
   <!-- VIEW 3: END VIEW -->
   <text x="920" y="44" font-family="monospace" font-size="14" font-weight="bold" fill="#0f172a">3. END VIEW</text>
   <!-- Runway rail -->
   <rect x="1104" y="200" width="32" height="14" fill="#64748b" stroke="#0f172a" stroke-width="1.2" />
-  <!-- Wheel & End carriage -->
+  <!-- Wheel and End carriage -->
   <circle cx="1120" cy="186" r="14" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
   <rect x="1075" y="154" width="90" height="22" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.2" />
   <!-- Girder cross section -->
-  <rect x="1098" y="110" width="44" height="44" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
-  <!-- Trolley & hook -->
+  <rect x="1098" y="114" width="44" height="40" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
+  <!-- Trolley and hook -->
   <rect x="1104" y="154" width="32" height="18" fill="#94a3b8" stroke="#0f172a" stroke-width="1.2" />
   <line x1="1120" y1="172" x2="1120" y2="238" stroke="#0f172a" stroke-width="1.5" />
   <path d="M 1114 238 A 6 6 0 1 0 1126 244" fill="none" stroke="#0f172a" stroke-width="2" />
@@ -220,5 +220,5 @@
   <text x="928" y="838" font-family="monospace" font-size="14" font-weight="bold" fill="#0f172a">Sample 10t / 25m</text>
   <text x="928" y="882" font-family="monospace" font-size="11" fill="#334155">SINGLE GIRDER EOT CRANE — 10t / 25m (A5)</text>
   <text x="928" y="924" font-family="monospace" font-size="11" font-weight="bold" fill="#b91c1c">NOT TO SCALE / PRELIMINARY</text>
-  <text x="928" y="942" font-family="monospace" font-size="10" fill="#475569">ALL DIMENSIONS IN mm | DATE: 2026-11-25</text>
+  <text x="928" y="942" font-family="monospace" font-size="10" fill="#475569">ALL DIMENSIONS IN mm | DATE: 2026-11-26</text>
 </svg>
