@@ -164,8 +164,8 @@ export function generateCraneSvg(input: CraneInput, computed: ComputedCrane): st
   ${dimH(elevX0, elevX0 + leftAppPx, 104, `MIN APP L: ${input.hook_approach_left_mm} mm`)}
   ${dimH(elevX1 - rightAppPx, elevX1, 104, `MIN APP R: ${input.hook_approach_right_mm} mm`)}
   ${dimV(84, railY, floorY, `FLOOR TO RAIL: ${computed.floor_to_rail_height_mm} mm`, elevX0, elevX0)}
-  ${dimV(trolleyX - 42, railY, hookY, `HEADROOM: ${computed.hook_headroom_mm} mm`, trolleyX, trolleyX)}
-  ${dimV(trolleyX + 42, hookY, hookY + liftPx, `LIFTING HEIGHT: ${computed.lifting_height_mm} mm`, trolleyX, trolleyX)}
+  ${dimV(elevX1 + 52, railY, hookY, `HEADROOM: ${computed.hook_headroom_mm} mm`, elevX1, elevX1)}
+  ${dimV(elevX1 + 100, hookY, hookY + liftPx, `LIFTING HEIGHT: ${computed.lifting_height_mm} mm`, elevX1, elevX1)}
 
   <!-- VIEW 2: PLAN VIEW (TOP) -->
   <text x="36" y="495" font-family="monospace" font-size="14" font-weight="bold" fill="#0f172a">2. PLAN VIEW (TOP)</text>
