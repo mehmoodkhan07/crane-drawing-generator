@@ -85,6 +85,7 @@ export function generateCraneSvg(input: CraneInput, computed: ComputedCrane): st
   const endRailY = 200;
   const wheelR = Math.max(10, Math.min(22, Math.round((computed.wheel_diameter_mm / 250) * 14)));
   const endGirderH = Math.max(24, Math.min(54, Math.round((computed.girder_height_mm / 1250) * 40)));
+  const endHookDrop = Math.max(20, Math.min(55, Math.round((computed.hook_headroom_mm / 620) * 38)));
 
   const techRows: Array<{ label: string; value: string; est?: boolean }> = [
     { label: 'CAPACITY (LOAD)', value: `${input.capacity_t} t` },
@@ -193,8 +194,8 @@ export function generateCraneSvg(input: CraneInput, computed: ComputedCrane): st
   <rect x="${endCx - 22}" y="${endRailY - wheelR * 2 - 18 - endGirderH}" width="44" height="${endGirderH}" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
   <!-- Trolley and hook -->
   <rect x="${endCx - 16}" y="${endRailY - 46}" width="32" height="18" fill="#94a3b8" stroke="#0f172a" stroke-width="1.2" />
-  <line x1="${endCx}" y1="${endRailY - 28}" x2="${endCx}" y2="${endRailY + 38}" stroke="#0f172a" stroke-width="1.5" />
-  <path d="M ${endCx - 6} ${endRailY + 38} A 6 6 0 1 0 ${endCx + 6} ${endRailY + 44}" fill="none" stroke="#0f172a" stroke-width="2" />
+  <line x1="${endCx}" y1="${endRailY - 28}" x2="${endCx}" y2="${endRailY + endHookDrop}" stroke="#0f172a" stroke-width="1.5" />
+  <path d="M ${endCx - 6} ${endRailY + endHookDrop} A 6 6 0 1 0 ${endCx + 6} ${endRailY + endHookDrop + 6}" fill="none" stroke="#0f172a" stroke-width="2" />
   <text x="${endCx + 24}" y="${endRailY - 10}" font-family="monospace" font-size="11" fill="#0f172a">WHEEL DIA: ø${computed.wheel_diameter_mm} mm</text>
 
   <!-- TECHNICAL DATA TABLE -->
