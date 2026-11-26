@@ -1,7 +1,7 @@
 import { CraneFormData } from './types';
 
 export const DEFAULT_FORM: CraneFormData = {
-  name: '',
+  name: 'New 10t / 25m Crane',
   capacity_t: '10',
   span_m: '25',
   lifting_height_m: '7.7',
