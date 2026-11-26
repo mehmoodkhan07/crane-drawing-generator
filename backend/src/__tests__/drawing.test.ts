@@ -68,4 +68,19 @@ describe('drawing (SVG)', () => {
     const svg = generateCraneSvg(BASE_INPUT, computeCrane(BASE_INPUT));
     expect(XMLValidator.validate(svg)).toBe(true);
   });
+
+  it('changes actual SVG geometry (girder width and column height) when span and floor-to-rail change', () => {
+    const svgA = generateCraneSvg(BASE_INPUT, computeCrane(BASE_INPUT));
+    const inputB: CraneInput = {
+      ...BASE_INPUT,
+      span_m: 12,
+      floor_to_rail_height_m: 20,
+    };
+    const svgB = generateCraneSvg(inputB, computeCrane(inputB));
+
+    // Extract first <rect ... width="..." height="..."> values for columns/girders
+    const widthsA = [...svgA.matchAll(/width="(\d+(?:\.\d+)?)"/g)].map((m) => m[1]);
+    const widthsB = [...svgB.matchAll(/width="(\d+(?:\.\d+)?)"/g)].map((m) => m[1]);
+    expect(widthsA).not.toEqual(widthsB);
+  });
 });
