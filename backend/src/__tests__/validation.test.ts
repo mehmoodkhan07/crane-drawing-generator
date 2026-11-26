@@ -89,4 +89,20 @@ describe('validation', () => {
       expect(res.errors.some((e) => e.field === 'lifting_height_m')).toBe(false);
     }
   });
+
+  it('returns cross-field headroom error together with another field error when capacity_t is valid', () => {
+    const res = validateCraneInput({
+      ...VALID_INPUT,
+      name: '',
+      capacity_t: 10,
+      lifting_height_m: 19,
+      floor_to_rail_height_m: 8,
+    });
+    expect(res.success).toBe(false);
+    if (!res.success) {
+      const fields = res.errors.map((e) => e.field);
+      expect(fields).toContain('name');
+      expect(fields).toContain('lifting_height_m');
+    }
+  });
 });
