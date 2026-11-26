@@ -43,32 +43,48 @@ function isEstimate(computed: ComputedCrane, formulaId: string): boolean {
 export function generateCraneSvg(input: CraneInput, computed: ComputedCrane): string {
   const today = new Date().toISOString().slice(0, 10);
 
-  // Proportional scaling for Front Elevation (max width 660px, max height 260px)
+  // Proportional scale factor for Front Elevation
+  const elevScale = Math.min(
+    640 / Math.max(computed.span_mm, 1),
+    240 / Math.max(computed.floor_to_rail_height_mm, 1)
+  );
   const elevX0 = 150;
-  const elevSpanPx = Math.max(320, Math.min(660, (computed.span_mm / 30000) * 660));
+  const elevSpanPx = Math.max(200, Math.round(computed.span_mm * elevScale));
   const elevX1 = elevX0 + elevSpanPx;
   const railY = 170;
-  const floorY = railY + Math.max(120, Math.min(240, (computed.floor_to_rail_height_mm / 25000) * 240));
-  const girderH = Math.max(22, Math.min(44, (computed.girder_height_mm / 1500) * 40));
+  const floorOffsetPx = Math.max(100, Math.round(computed.floor_to_rail_height_mm * elevScale));
+  const floorY = railY + floorOffsetPx;
+  const girderH = Math.max(16, Math.round(computed.girder_height_mm * elevScale));
   const girderTopY = railY - girderH - 12;
-  const headroomPx = Math.max(18, Math.min(40, (computed.hook_headroom_mm / 1000) * 30));
+  const headroomPx = Math.max(14, Math.round(computed.hook_headroom_mm * elevScale));
   const hookY = railY + headroomPx;
-  const liftPx = Math.max(60, Math.min(floorY - hookY - 12, (computed.lifting_height_mm / computed.floor_to_rail_height_mm) * (floorY - railY)));
+  const liftPx = Math.max(
+    40,
+    Math.min(floorY - hookY - 14, Math.round(computed.lifting_height_mm * elevScale))
+  );
 
-  const leftAppPx = Math.max(35, (input.hook_approach_left_mm / computed.span_mm) * elevSpanPx);
-  const rightAppPx = Math.max(35, (input.hook_approach_right_mm / computed.span_mm) * elevSpanPx);
+  const leftAppPx = Math.max(28, (input.hook_approach_left_mm / computed.span_mm) * elevSpanPx);
+  const rightAppPx = Math.max(28, (input.hook_approach_right_mm / computed.span_mm) * elevSpanPx);
   const trolleyX = elevX0 + elevSpanPx * 0.42;
 
-  // Plan View (Top) below Front Elevation
+  // Proportional scale factor for Plan View (Top)
+  const planScale = Math.min(
+    640 / Math.max(computed.overall_length_mm, 1),
+    190 / Math.max(computed.overall_width_mm, 1)
+  );
   const planY0 = 540;
-  const wbPx = Math.max(80, Math.min(180, (computed.wheelbase_mm / 6000) * 180));
-  const owPx = wbPx + 24;
+  const planSpanPx = Math.max(200, Math.round(computed.span_mm * planScale));
+  const planX1 = elevX0 + planSpanPx;
+  const wbPx = Math.max(50, Math.round(computed.wheelbase_mm * planScale));
+  const owPx = Math.max(66, Math.round(computed.overall_width_mm * planScale));
   const planCenterY = planY0 + owPx / 2;
-  const overhangPx = 14;
+  const overhangPx = Math.max(10, Math.round(((computed.overall_length_mm - computed.span_mm) / 2) * planScale));
 
-  // End View (top-right)
+  // End View (top-right) scaled from wheel diameter & girder height
   const endCx = 1120;
   const endRailY = 200;
+  const wheelR = Math.max(10, Math.min(22, Math.round((computed.wheel_diameter_mm / 250) * 14)));
+  const endGirderH = Math.max(24, Math.min(54, Math.round((computed.girder_height_mm / 1250) * 40)));
 
   const techRows: Array<{ label: string; value: string; est?: boolean }> = [
     { label: 'CAPACITY (LOAD)', value: `${input.capacity_t} t` },
@@ -154,15 +170,15 @@ export function generateCraneSvg(input: CraneInput, computed: ComputedCrane): st
   <text x="36" y="495" font-family="monospace" font-size="14" font-weight="bold" fill="#0f172a">2. PLAN VIEW (TOP)</text>
   <!-- Runway rails -->
   <line x1="${elevX0}" y1="${planY0 - 25}" x2="${elevX0}" y2="${planY0 + owPx + 25}" stroke="#475569" stroke-width="2" stroke-dasharray="6,4" />
-  <line x1="${elevX1}" y1="${planY0 - 25}" x2="${elevX1}" y2="${planY0 + owPx + 25}" stroke="#475569" stroke-width="2" stroke-dasharray="6,4" />
+  <line x1="${planX1}" y1="${planY0 - 25}" x2="${planX1}" y2="${planY0 + owPx + 25}" stroke="#475569" stroke-width="2" stroke-dasharray="6,4" />
   <!-- End carriages -->
   <rect x="${elevX0 - overhangPx}" y="${planY0}" width="28" height="${owPx}" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
-  <rect x="${elevX1 - 28 + overhangPx}" y="${planY0}" width="28" height="${owPx}" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
+  <rect x="${planX1 - 28 + overhangPx}" y="${planY0}" width="28" height="${owPx}" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
   <!-- Bridge girder -->
-  <rect x="${elevX0}" y="${planCenterY - 14}" width="${elevSpanPx}" height="28" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.5" />
+  <rect x="${elevX0}" y="${planCenterY - 14}" width="${planSpanPx}" height="28" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.5" />
 
   <!-- Plan View Dimensions -->
-  ${dimH(elevX0 - overhangPx, elevX1 + overhangPx, planY0 + owPx + 45, `OVERALL LENGTH: ${computed.overall_length_mm} mm`, planY0 + owPx, planY0 + owPx)}
+  ${dimH(elevX0 - overhangPx, planX1 + overhangPx, planY0 + owPx + 45, `OVERALL LENGTH: ${computed.overall_length_mm} mm`, planY0 + owPx, planY0 + owPx)}
   ${dimV(110, planY0 + 12, planY0 + owPx - 12, `WHEELBASE: ${computed.wheelbase_mm} mm`, elevX0 - overhangPx, elevX0 - overhangPx)}
   ${dimV(72, planY0, planY0 + owPx, `OVERALL WIDTH: ${computed.overall_width_mm} mm`, elevX0 - overhangPx, elevX0 - overhangPx)}
 
@@ -171,10 +187,10 @@ export function generateCraneSvg(input: CraneInput, computed: ComputedCrane): st
   <!-- Runway rail -->
   <rect x="${endCx - 16}" y="${endRailY}" width="32" height="14" fill="#64748b" stroke="#0f172a" stroke-width="1.2" />
   <!-- Wheel and End carriage -->
-  <circle cx="${endCx}" cy="${endRailY - 14}" r="14" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
-  <rect x="${endCx - 45}" y="${endRailY - 46}" width="90" height="22" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.2" />
+  <circle cx="${endCx}" cy="${endRailY - wheelR}" r="${wheelR}" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
+  <rect x="${endCx - 45}" y="${endRailY - wheelR * 2 - 18}" width="90" height="22" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.2" />
   <!-- Girder cross section -->
-  <rect x="${endCx - 22}" y="${endRailY - 90}" width="44" height="44" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
+  <rect x="${endCx - 22}" y="${endRailY - wheelR * 2 - 18 - endGirderH}" width="44" height="${endGirderH}" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5" />
   <!-- Trolley and hook -->
   <rect x="${endCx - 16}" y="${endRailY - 46}" width="32" height="18" fill="#94a3b8" stroke="#0f172a" stroke-width="1.2" />
   <line x1="${endCx}" y1="${endRailY - 28}" x2="${endCx}" y2="${endRailY + 38}" stroke="#0f172a" stroke-width="1.5" />
